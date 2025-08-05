@@ -1,6 +1,6 @@
 package com.peoject.API.controller;
 
-import org.springframework.stereotype.Controller;
+//import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo/api")
 
 public class DemoController {
-    @GetMapping
+    @GetMapping("/demo1")
     public String getDemo(){
         System.out.println("This is our first demo API");
         return "This is our first demo API";
+    }
+
+    @GetMapping("/demo2")
+    public String getDemo2(){
+        System.out.println("This is our second demo API");
+        return "This is our second demo API";
     }
 }
